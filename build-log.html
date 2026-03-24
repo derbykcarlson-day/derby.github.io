@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Log | Derby Carlson</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: '#7FB069', 
+                        dark: '#0B0B0A', 
+                        light: '#FEFFFE', 
+                        green: '#105632', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Adjusted the log-line to align perfectly with a parent container border */
+        .log-line { 
+        position: relative; 
+        padding-left: 2rem; /* Consistent 32px gap from the line */
+        }
+        .log-line::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #7FB069, #7FB069 50%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-[#F9FAF9] text-slate-600 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <nav class="fixed w-full z-[100] bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center gap-4">
+                <a href="home.html" class="group flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-dark flex items-center justify-center text-white group-hover:bg-brand transition-colors duration-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                    </div>
+                    <div class="hidden sm:block">
+                        <p class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-dark transition">Main Site</p>
+                        <p class="font-heading font-bold text-xs text-dark tracking-tight">DERBY.MARKETING</p>
+                    </div>
+                </a>
+                <div class="h-8 w-px bg-slate-200 mx-2"></div>
+                <div class="font-heading font-bold text-xl text-dark tracking-tight uppercase">
+                    BUILD<span class="text-brand">.</span>LOG
+                </div>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-100">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-slate-500">Live Updates</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="work-draft.html" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-brand transition">Work</a>
+                    <a href="about.html" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-brand transition">About</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-full border border-dark text-dark font-bold text-[10px] uppercase tracking-widest hover:bg-dark hover:text-white transition">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="pt-40 pb-16 px-6">
+        <div class="max-w-3xl mx-auto">
+        <div class="inline-block px-3 py-1 mb-6 rounded-full bg-brand/10 text-brand text-[9px] font-bold tracking-[0.3em] uppercase border border-brand/20">
+            System Status: Over-Caffeinated & Operational
+        </div>
+                    <h1 class="font-heading text-5xl md:text-7xl font-black text-dark mb-6 tracking-tighter leading-none">
+                        The <span class="underline decoration-brand decoration-2 underline-offset-4 text-dark">B</span>uild <span class="italic font-light underline decoration-brand decoration-2 underline-offset-4 text-dark">Log</span>.
+                        <span class="block text-sm md:text-base font-mono text-brand mt-2 font-medium tracking-normal">
+                            (aka the blog of human errors, TargetX wins, and coffee-fueled HTML)
+                        </span>
+                    </h1>
+            <p class="text-slate-500 text-lg leading-relaxed border-l-2 border-brand/30 pl-6">
+                A chronicle of CRM architecture and marketing automation. If I broke it, fixed it, or automated it this week, it’s recorded here. Just keeping the gears turning.
+            </p>
+        </div>
+    </section>
+
+<section class="pb-32 px-6">
+        <div class="max-w-3xl mx-auto space-y-10">
+            
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">March 24, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Data Hygiene</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Optimization</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            Wrestling 20,000 Rows of Pure Chaos.
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            The monthly name buy is here. Every time I open this 20,000-row spreadsheet, a small part of me contemplates a career in professional goat herding. But then, the Excel shortcuts kick in. I’ve reached a level of nerdery where VLOOKUPs and pivot tables feel like superpowers. Data hygiene isn't always glamorous, but when you get to the 20,000 line... God, do you feel accomplished for the day.
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm">
+            > Status: Scrubbed. De-duped. Uploaded. The sorority vice-president Derby from four years ago is judging.
+        </div>
+    </div>
+</article>
+
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">March 19, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-brand text-white font-bold uppercase tracking-tighter">Major Milestone</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Yield Marketing</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            LET'S GOOOOOO! (Admitted Student Day: Registration Closed Early)
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            I'm not going to lie: Admitted Student Day has been my "baby" for the last six weeks. I've lived and breathed this campaign. Today, I got the message from my boss' boss: <b>Registrations are officially closed because we hit the cap.</b> 
+            <br><br>
+            Apparently, we've never had to do that before. It feels a bit like watching your kid say their first words. There is nothing quite like the surreal high of seeing your HTML architecture, your copy, and your strategy pay off in a way that actually breaks records. 
+        </p>
+        <div class="bg-brand border border-brand/20 p-4 rounded-xl font-mono text-xs text-white shadow-lg shadow-brand/10">
+            > SYSTEM UPDATE: Registration Cap Reached. Campaign ROI: Optimized. 100% Proud Parent Moment.
+        </div>
+    </div>
+</article>
+
+
+
+
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">March 18, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Email Marketing</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Strategy</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            "But... Why?" (The Housing Email Intervention)
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            Today’s mission: The "Living here is 24/7 Spring Break" housing email. Every time I talk strategy, I see eyes glaze over, so I always bring it back to the golden rule: <i>Would you actually open this?</i> I’ve realized that my job is 50% technical architecture and 50% asking the uncomfortable "Why?" to teams who just want to hit send. It's a struggle, but somebody has to protect the students' inboxes from the fluff. *Sigh.*
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm">
+            > Status: Email Approved. Fluff minimized. Student inboxes saved (for today).
+        </div>
+    </div>
+</article>
+
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">March 15, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Rapid Response</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Internal Comms</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            WE MADE THE PLAYOFFS?! (Narrator: They did not.)
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            It’s March. The air is electric. I saw the words "Playoffs," "Watch Party," and "Free Food" in a Teams thread and my brain went full March Madness. <i>Our small school is making history!</i> I thought. At 10:00 PM, fueled by pure hype and espresso, I whipped together a high-energy email campaign that would make a Nike ad look boring. 
+            <br><br>
+            Plot twist: It was the Alumni Association hosting a watch party for the <i>semi-finals</i> to the playoffs that <u>might</u> eventually lead to the NCAA. Even as I was designing it, I kept thinking, <i>"Why are we doing a watch party for the semi-finals?"</i> but my fingers just kept coding. My masterpiece was shelved before the "Send" button even stood a chance.
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-indigo-500 shadow-sm">
+            > Status: Campaign Shelved. Assets archived. Lesson learned: Drink water and read the full thread before opening the HTML editor. 
+        </div>
+    </div>
+</article>
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-red-500 uppercase tracking-widest">March 13, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-red-50 font-bold uppercase tracking-tighter text-red-500">System Alert</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Broken Logic</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Pivot</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-red-500 transition">
+            The "Expired Link" Apocalypse.
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            As I was pulling my annual metrics (God, the year has flown by... and I officially sound like my grandmother), I was reminded of a legendary mistake from November. I sent out the Prospective Student Day invite, but forgot to update the registration link. <b>The result?</b> Thousands of students clicking a link that told them the event had already passed. 
+            <br><br>
+            My boss' boss hit me on Teams immediately. I died a little on the inside, resurrected myself, and fired off a <b>"FIXED LINK! SO SORRY!"</b> follow-up. Plot twist: that frantic apology was our most opened and clicked email of the entire quarter. It taught me two things: 1. People love a "human" mistake, and 2. My predecessor’s text-heavy legacy templates need to die. 
+        </p>
+        <div class="bg-red-50 border border-red-100 p-4 rounded-xl font-mono text-xs text-red-600 shadow-sm">
+            > CRITICAL: Broken link detected. "The Oopsie-Campaign" outperformed the original by 40%. Conclusion: Keep it short, keep it HTML, keep it real.
+        </div>
+    </div>
+</article>
+       <article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">March 12, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">TargetX</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Logic Check</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            "Stop Emailing Me!" (A Cautionary Tale of Event Logic)
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            Enrollment Management (EM) hit the panic button today: students who already registered for Admitted Student Day were still getting "Please Register!" nudges. <i>"What? Impossible,"</i> I thought, diving into the TargetX abyss. After thirty minutes of frantic logic-tracing, I realized... it was human error. Le Gasp! I was filtering for event history that technically hadn't "happened" yet. (Thus... no history.) I’m officially Boo Boo the Fool today. Time to start double-checking those EM reports like a hawk. 
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-amber-600/80 shadow-sm">
+            > Debug: "Event History" filters don't see the future. Remember this, Future Derby. 🤡
+        </div>
+    </div>
+</article>
+
+<article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">February 18, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">TargetX</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Automation</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Meta</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            It’s Alive! The Meta Inquiry Flow is Live.
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            Yesterday’s battle with the Sandbox is officially won. After many, <i>many</i> hours of trial, error, and talking to my monitor, the flow is implemented. Now, when I upload a batch through DataLoader, TargetX automatically recognizes them as Meta Ad leads and tracks them accordingly. No more manual sorting. No more "guessing" where the leads came from. Just clean, beautiful automation.
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm">
+            > Log: Success. Automation deployed. Manual lead-tracking time eliminated.
+        </div>
+    </div>
+</article>
+
+ <article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">February 17, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Skill Up</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Automation</span>
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Meta</span>
+        </div>
+    </div>
+    <div class="block">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            Breaking the Dependency (or: Why aren’t you creating records?!)
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            I realized today that depending entirely on our TargetX representative for flows was becoming a bottleneck. If I’m going to own this CRM, I need to know how the engine works. I spent four hours in the Sandbox today playing "Why didn't this name create an inquiry record?" It's frustrating, it's tedious, and I’m currently losing the fight—but I’ll be back at it tomorrow. I’m learning this skill if it’s the last thing I do. :-)
+        </p>
+        <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-indigo-500/80 shadow-sm">
+            > Status: In Progress. 45 test names entered. 0 records created. Coffee levels: Critical.
+        </div>
+    </div>
+</article>
+
+ 
+
+            <article class="log-entry group" x-data="{ expanded: false }">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+                    <time class="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">Feb — March 2026</time>
+                    <div class="flex gap-2">
+                        <span class="text-[9px] px-2 py-0.5 rounded-md bg-brand/10 font-bold uppercase tracking-tighter text-brand">System Maintenance</span>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm max-w-2xl">
+                    <div class="p-6 border-b border-slate-50 bg-slate-50/50">
+                        <h3 class="font-heading font-bold text-dark tracking-tight">Automated Flow & Template Sprint</h3>
+                        <p class="text-xs text-slate-500 mt-1">High-frequency updates to auto-confirmations and RFI flows.</p>
+                    </div>
+                    
+                    <div class="divide-y divide-slate-50">
+                        <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-dark">Kinesiology MS — Auto Confirmation</span>
+                                <span class="text-[10px] text-slate-400 font-mono">HTML Updated: 3/6/2026</span>
+                            </div>
+                            <span class="text-[9px] font-black text-brand uppercase tracking-tighter">Live</span>
+                        </div>
+
+                        <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-dark">Admissions Webinar — Housing</span>
+                                <span class="text-[10px] text-slate-400 font-mono">Template Created: 3/5/2026</span>
+                            </div>
+                            <span class="text-[9px] font-black text-brand uppercase tracking-tighter">Active</span>
+                        </div>
+
+                        <div x-show="expanded" x-collapse>
+                            <div class="divide-y divide-slate-50 border-t border-slate-50">
+                                <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                    <div class="flex flex-col">
+                                        <span class="text-xs font-bold text-dark">Meta Undergraduate Gen — Auto Email</span>
+                                        <span class="text-[10px] text-slate-400 font-mono">HTML + Send: 2/25/2026</span>
+                                    </div>
+                                    <span class="text-[9px] font-black text-slate-300 uppercase tracking-tighter">Sent</span>
+                                </div>
+                                <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                    <div class="flex flex-col">
+                                        <span class="text-xs font-bold text-dark">C&I MS — Auto Confirmation</span>
+                                        <span class="text-[10px] text-slate-400 font-mono">Refactored: 2/24/2026</span>
+                                    </div>
+                                    <span class="text-[9px] font-black text-brand uppercase tracking-tighter">Live</span>
+                                </div>
+                                <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+                                    <div class="flex flex-col">
+                                        <span class="text-xs font-bold text-dark">Inquiry Flow — Location Based</span>
+                                        <span class="text-[10px] text-slate-400 font-mono">HTML Updated: 2/16/2026</span>
+                                    </div>
+                                    <span class="text-[9px] font-black text-brand uppercase tracking-tighter">Active</span>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <button 
+                        @click="expanded = !expanded" 
+                        class="w-full p-3 bg-slate-50 hover:bg-slate-100 text-center transition-colors border-t border-slate-100"
+                    >
+                        <span 
+                            class="text-[10px] font-bold text-slate-400 uppercase tracking-widest" 
+                            x-text="expanded ? 'Show Less ↑' : '+ 12 more automated updates ↓'"
+                        ></span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="log-line group">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+                    <time class="font-mono text-xs font-bold text-brand uppercase tracking-widest">January 30, 2026</time>
+                    <div class="flex gap-2">
+                        <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Design Refresh</span>
+                        <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">HTML</span>
+                    </div>
+                </div>
+            <a href="#" class="block group">
+                <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+                Last-Minute Visual Overhaul: Islander Block Party Invite.
+                </h2>
+                <p class="text-slate-500 mb-6 leading-relaxed">
+                Received a 1:00 PM request for a complete copy and visual refresh for a next-day send. Successfully updated the HTML architecture and template look to meet the tight turnaround.
+                </p>
+                <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80">
+                > Status: Sent 1/30. Report Generated.
+                </div>
+            </a>
+        </article>
+
+        <article class="log-line group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+                <time class="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">January 28, 2026</time>
+                <div class="flex gap-2">
+                    <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">CRM Reporting</span>
+                    <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Campaigns</span>
+                </div>
+            </div>
+            <a href="#" class="block group">
+                <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+                    Standardizing the "Jan Start Push" HTML.
+                </h2>
+                <p class="text-slate-500 mb-6 leading-relaxed">
+                    Managed the HTML updates for both MAC and C&I enrollment pushes. Addressed cross-departmental copy confusion to ensure unique messaging reached the correct student segments.
+                </p>
+                <div class="bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80">
+                    > Daily Upload complete 2/18. Report Active.
+                </div>
+            </a>
+        </article>
+
+        <article class="log-line group">
+            <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+                <time class="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">January 15, 2026</time>
+                <div class="flex gap-2">
+                    <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Content Audit</span>
+                </div>
+            </div>
+            <a href="#" class="block group">
+                <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+                    Audit: Fall Islander Magazine Campaign.
+                </h2>
+                <p class="text-slate-500 mb-6 leading-relaxed">
+                    Coordinated with the creative team to pull necessary magazine copy for email deployment. Successfully tracked sent status and closed the reporting loop for this recruitment cycle.
+                </p>
+            </a>
+        </article>
+
+        <article class="log-line group">
+    <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
+        <time class="font-mono text-xs font-bold text-slate-400 uppercase tracking-widest">January 12, 2026</time>
+        <div class="flex gap-2">
+            <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-100 font-bold uppercase tracking-tighter text-slate-400">Dev Initiative</span>
+        </div>
+    </div>
+    <a href="#" class="block group">
+        <h2 class="font-heading text-3xl font-bold text-dark mb-4 leading-tight group-hover:text-brand transition">
+            Refactoring Quotes From Clubs Template.
+        </h2>
+        <p class="text-slate-500 mb-6 leading-relaxed">
+            Took the initiative to modernize the HTML for the student organizations template. Focused on improving mobile responsiveness and cleaner rendering across email clients.
+        </p>
+    </a>
+</article>
+        </div>
+</section>
+
+
+
+    <footer class="py-12 px-6 border-t border-white/10 bg-dark">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+
+            <div class="text-center md:text-left">
+                <a href="#" class="font-heading font-bold text-xl text-white tracking-tight">
+                    DERBY<span class="text-brand">.</span>MARKETING
+                </a>
+                <p class="text-text text-sm mt-2">Strategic Enrollment Marketing & CRM Architecture</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end gap-4">
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/in/derby-carlson/" target="_blank"
+                        class="text-text hover:text-brand transition-colors duration-300" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://instagram.com/derby.day" target="_blank"
+                        class="text-text hover:text-brand transition-colors duration-300" aria-label="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://x.com/YOUR_USERNAME" target="_blank"
+                        class="text-text hover:text-brand transition-colors duration-300" aria-label="X (Twitter)">
+                        <svg class="w-5 h-5 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="text-slate-500 text-xs">
+                    &copy; 2026 Derby Marketing. All Rights Reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
