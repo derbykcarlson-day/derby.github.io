@@ -1,0 +1,5 @@
+baseURL = 'https://derby.marketing/'
+languageCode = 'en-us'
+title = 'Strategic Enrollment Marketing | Derby Carlson'
+[markup.goldmark.renderer]
+  unsafe = true

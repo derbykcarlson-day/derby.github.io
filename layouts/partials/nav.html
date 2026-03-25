@@ -1,0 +1,28 @@
+<nav class="fixed w-full z-[100] bg-dark/80 backdrop-blur-md border-b border-white/10" x-data="{ open: false }">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+            <a href="/" class="font-heading font-bold text-2xl text-white tracking-tight">
+                DERBY<span class="text-brand">.</span>MARKETING
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/work/" class="text-m font-medium text-light hover:text-brand transition">Projects</a>
+                <a href="/log/" class="text-m font-medium text-light hover:text-brand transition">Log</a>
+                <a href="/about/" class="text-m font-medium text-light hover:text-brand transition">About Me</a>
+                <a href="/contact/" class="px-5 py-2.5 rounded-full bg-light text-dark font-bold text-sm hover:bg-brand hover:text-white transition">Let's Talk</a>
+            </div>
+            <button @click="open = !open" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div x-show="open" class="md:hidden bg-card border-b border-white/10" @click.away="open = false" style="display: none;">
+        <div class="flex flex-col px-6 py-4 space-y-4">
+            <a href="/work/" class="text-white">Work</a>
+            <a href="/log/" class="text-white">Log</a>
+            <a href="/about/" class="text-brand font-bold">About Me</a>
+            <a href="/contact/" class="text-white">Contact</a>
+        </div>
+    </div>
+</nav>

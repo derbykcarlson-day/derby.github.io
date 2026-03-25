@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build Log on Strategic Enrollment Marketing | Derby Carlson</title>
+    <link>http://localhost:1313/log/</link>
+    <description>Recent content in Build Log on Strategic Enrollment Marketing | Derby Carlson</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrestling 20,000 Rows of Pure Chaos.</title>
+      <link>http://localhost:1313/log/wrestling-chaos/</link>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/wrestling-chaos/</guid>
+      <description>&lt;p&gt;The monthly name buy is here. Every time I open this 20,000-row spreadsheet, a small part of me contemplates a career in professional goat herding. But then, the Excel shortcuts kick in. I’ve reached a level of nerdery where VLOOKUPs and pivot tables feel like superpowers. Data hygiene isn&amp;rsquo;t always glamorous, but when you get to the 20,000 line&amp;hellip; God, do you feel accomplished for the day.&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; Status: Scrubbed. De-duped. Uploaded.&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>LET&#39;S GOOOOOO! (Admitted Student Day: Registration Closed Early)</title>
+      <link>http://localhost:1313/log/admitted-student-day/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/admitted-student-day/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m not going to lie: Admitted Student Day has been my &amp;lsquo;baby&amp;rsquo; for the last six weeks&amp;hellip;&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; SYSTEM UPDATE: Registration Cap Reached. Campaign ROI: Optimized.&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>But... Why? (The Housing Email Intervention)</title>
+      <link>http://localhost:1313/log/housing-intervention/</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/housing-intervention/</guid>
+      <description>&lt;p&gt;Today’s mission: The &amp;lsquo;Living here is 24/7 Spring Break&amp;rsquo; housing email&amp;hellip;&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; Status: Email Approved. Fluff minimized. Student inboxes saved.&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>WE MADE THE PLAYOFFS?! (Narrator: They did not.)</title>
+      <link>http://localhost:1313/log/playoffs-narrator/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/playoffs-narrator/</guid>
+      <description>&lt;p&gt;It’s March. The air is electric. I saw the words &amp;lsquo;Playoffs,&amp;rsquo; &amp;lsquo;Watch Party,&amp;rsquo; and &amp;lsquo;Free Food&amp;rsquo; in a Teams thread&amp;hellip;&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; Status: Campaign Shelved. Assets archived.&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>The Expired Link Apocalypse.</title>
+      <link>http://localhost:1313/log/expired-link/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/expired-link/</guid>
+      <description>&lt;p&gt;As I was pulling my annual metrics&amp;hellip; I sent out the Prospective Student Day invite, but forgot to update the registration link.&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; CRITICAL: Broken link detected. &#39;The Oopsie-Campaign&#39; outperformed the original by 40%.&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>It’s Alive! The Meta Inquiry Flow is Live.</title>
+      <link>http://localhost:1313/log/meta-inquiry-live/</link>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/meta-inquiry-live/</guid>
+      <description>&lt;p&gt;Yesterday’s battle with the Sandbox is officially won. Now, when I upload a batch through DataLoader, TargetX automatically recognizes them as Meta Ad leads.&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; Log: Success. Automation deployed.&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
