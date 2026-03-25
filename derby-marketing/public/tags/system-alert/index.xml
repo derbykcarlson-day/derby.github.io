@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Alert on Strategic Enrollment Marketing | Derby Carlson</title>
+    <link>http://localhost:1313/tags/system-alert/</link>
+    <description>Recent content in System Alert on Strategic Enrollment Marketing | Derby Carlson</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/system-alert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Expired Link Apocalypse.</title>
+      <link>http://localhost:1313/log/expired-link/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/log/expired-link/</guid>
+      <description>&lt;p&gt;As I was pulling my annual metrics&amp;hellip; I sent out the Prospective Student Day invite, but forgot to update the registration link.&lt;/p&gt;&#xA;&lt;div class=&#34;bg-white border border-slate-100 p-4 rounded-xl font-mono text-xs text-brand/80 shadow-sm mt-6&#34;&gt;&#xA;    &gt; CRITICAL: Broken link detected. &#39;The Oopsie-Campaign&#39; outperformed the original by 40%.&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
