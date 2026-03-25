@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Build Log</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: '#7FB069', 
+                        dark: '#0B0B0A', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .markdown-content p { margin-bottom: 1.5rem; color: #475569; line-height: 1.75; font-size: 1.125rem; }
+        .markdown-content b, .markdown-content strong { color: #0B0B0A; }
+        .markdown-content i, .markdown-content em { color: #64748b; }
+    </style>
+</head>
+<body class="bg-[#F9FAF9] text-slate-600 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <nav class="fixed w-full z-[100] bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="group flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-dark flex items-center justify-center text-white group-hover:bg-brand transition-colors duration-300">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        </div>
+                        <div class="hidden sm:block">
+                            <p class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-dark transition">Main Site</p>
+                            <p class="font-heading font-bold text-xs text-dark tracking-tight">DERBY.MARKETING</p>
+                        </div>
+                    </a>
+                    <div class="h-8 w-px bg-slate-200 mx-2"></div>
+                    <a href="/log/" class="font-heading font-bold text-xl text-dark tracking-tight uppercase hover:text-brand transition">
+                        BUILD<span class="text-brand">.</span>LOG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-40 pb-32 px-6">
+        <div class="max-w-2xl mx-auto">
+            <a href="/log/" class="inline-flex items-center text-xs font-bold text-slate-400 hover:text-brand transition mb-10 uppercase tracking-widest">
+                &larr; Back to Timeline
+            </a>
+            
+            <header class="mb-10 pb-10 border-b border-slate-200">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-6">
+                    <time class="font-mono text-sm font-bold text-brand uppercase tracking-widest">{{ .Date.Format "January 2, 2006" }}</time>
+                    <div class="flex gap-2">
+                        {{ range .Params.tags }}
+                        <span class="text-[9px] px-2 py-0.5 rounded-md bg-slate-200 font-bold uppercase tracking-tighter text-slate-500">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+                <h1 class="font-heading text-4xl md:text-5xl font-black text-dark leading-tight tracking-tight">
+                    {{ .Title }}
+                </h1>
+            </header>
+
+            <div class="markdown-content">
+                {{ .Content }} 
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
